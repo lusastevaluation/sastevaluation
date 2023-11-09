@@ -1,0 +1,28 @@
+rules:
+  - id: regex-injection
+    metadata:
+      cwe: "CWE-1333: Inefficient Regular Expression Complexity"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2016-8738
+        - https://nvd.nist.gov/vuln/detail/CVE-2017-7672
+        - https://nvd.nist.gov/vuln/detail/CVE-2016-4465
+        - https://github.com/apache/struts/commit/554b9dddb0fbd1e581ef577dd62a7c22955ad0f6
+        - https://github.com/apache/struts/commit/931df54ab379bf4eb5a625bf05066b8563c3737b
+        - https://github.com/apache/struts/commit/a0fdca138feec2c2e94eb75ca1f8b76678b4d152
+    message: Regular expression injection detected which may lead to a Regular
+      expression Denial of Service (ReDoS).
+    languages:
+      - java
+    severity: WARNING
+    patterns:
+      - pattern-inside: |
+          ...
+          import java.util.regex.Pattern;
+          ...
+      - pattern-either:
+          - pattern: Pattern.$METHOD(...)
+          - pattern: |
+              Pattern $VAR = ...;
+              ...
+              $VAR.$METHOD(...);
+              ...

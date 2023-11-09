@@ -1,0 +1,17 @@
+rules:
+  - id: jndi-injection
+    metadata:
+      cwe: "CWE-74: Improper Neutralization of Special Elements in Output Used by a
+        Downstream Component ('Injection')"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-1000130
+        - https://github.com/jolokia/jolokia/commit/1b360b8889f0ed51165a8d1ac55dd8e0aa2dfd4
+        - https://semgrep.dev/docs/cheat-sheets/java-code-injection/
+    message: JNDI Injection detected. Verify the input to JMXServiceURL.
+    languages:
+      - java
+    severity: WARNING
+    pattern: |
+      String $VAR = ...;
+      ...
+      JMXServiceURL $URL = new JMXServiceURL($VAR);

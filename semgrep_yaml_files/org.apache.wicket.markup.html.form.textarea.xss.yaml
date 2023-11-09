@@ -1,0 +1,19 @@
+rules:
+  - id: org.apache.wicket.markup.html.form.textarea.xss
+    metadata:
+      cwe: "CWE-79: Improper Neutralization of Input During Web Page Generation
+        ('Cross-site Scripting')"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2017-15719
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-1325
+        - https://github.com/sebfz1/wicket-jquery-ui/commit/3e8cfdcb0f8e6e0cf0da01e74501afb5c9bff0f
+        - https://github.com/sebfz1/wicket-jquery-ui/commit/2fec03dbe2f6e8808f4bdc6b3195dff3e44f520
+      owasp: A7:2017-Cross-Site Scripting (XSS)
+      source-rule-url: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+      category: security
+    pattern: $TEXTAREA = new TextArea<$T>(...) ;
+    message: TextArea may be vulnerable to cross-site scripting attacks. Consider
+      sanitizing the input or using HiddenField instead.
+    languages:
+      - java
+    severity: ERROR

@@ -1,0 +1,23 @@
+rules:
+  - id: matfilereader-xxe
+    metadata:
+      cwe: "CWE-502: Deserialization of Untrusted Data"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2016-6809
+        - https://github.com/apache/tika/commit/8a68b5d474205cc91cbbb610d4a1c05af57f0610
+    patterns:
+      - pattern: $MATFILEREADER = new MatFileReader(...);
+      - pattern-not-inside: |
+          ...
+          MatFileReader.setAllowObjectDeserialization(false);
+          ...
+      - pattern-not-inside: |
+          ...
+          $MATFILEREADER.setAllowObjectDeserialization(false);
+          ...
+    message: MatFileReader allows object deserialization as standard, which can
+      result in code execution via serialized objects. Set object
+      deserialization to false before verifying input first.
+    languages:
+      - java
+    severity: ERROR

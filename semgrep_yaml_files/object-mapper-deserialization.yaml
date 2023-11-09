@@ -1,0 +1,23 @@
+rules:
+  - id: object-mapper-deserialization
+    metadata:
+      cwe:
+        - "CWE-502: Deserialization of Untrusted Data"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2016-8749
+        - https://github.com/apache/camel/commit/57d01e2fc8923263df896e9810329ee5b7f9b69
+    pattern-either:
+      - pattern: |
+          import com.fasterxml.jackson.databind.ObjectMapper;
+          ...
+          this.$OM = new ObjectMapper();
+          ...
+          this.$OM.readValue(...);
+    message: Don't call
+      com.fasterxml.jackson.databind.ObjectMapper#enableDefaultTyping and don't
+      annotate any object fields with
+      com.fasterxml.jackson.annotation.JsonTypeInfo passing either the CLASS or
+      MINIMAL_CLASS values to the annotation.
+    languages:
+      - java
+    severity: WARNING

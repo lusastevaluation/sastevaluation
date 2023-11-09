@@ -1,0 +1,17 @@
+rules:
+  - id: information-exposure
+    metadata:
+      cwe: "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-1000110
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-1000111
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-1000112
+        - https://github.com/jenkinsci/git-plugin/commit/a3d3a7eb7f75bfe97a0291e3b6d074aafafa86c9
+        - https://github.com/jenkinsci/subversion-plugin/commit/25f6afbb02a5863f363b0a2f664ac717ace743b4
+        - https://github.com/jenkinsci/mercurial-plugin/commit/54b4f82e80c89d51b12bc64258f6b59e98b0c16a
+    pattern-either:
+      - pattern: public String getSearchUrl()
+    message: GetSearchUrl may expose sensitive information.
+    languages:
+      - java
+    severity: WARNING

@@ -1,0 +1,41 @@
+rules:
+  - id: use-snakeyaml-constructor-copy
+    languages:
+      - java
+    metadata:
+      owasp:
+        - A08:2017 - Insecure Deserialization
+        - A08:2021 - Software and Data Integrity Failures
+      cwe:
+        - "CWE-502: Deserialization of Untrusted Data"
+      references:
+        - https://securitylab.github.com/research/swagger-yaml-parser-vulnerability/#snakeyaml-deserialization-vulnerability
+      category: security
+      technology:
+        - snakeyaml
+      cwe2022-top25: true
+      cwe2021-top25: true
+      subcategory:
+        - audit
+      likelihood: LOW
+      impact: HIGH
+      confidence: LOW
+      license: Commons Clause License Condition v1.0[LGPL-2.1-only]
+      vulnerability_class:
+        - "Insecure Deserialization "
+    message: Used SnakeYAML org.yaml.snakeyaml.Yaml() constructor with no arguments,
+      which is vulnerable to deserialization attacks. Use the one-argument
+      Yaml(...) constructor instead, with SafeConstructor or a custom
+      Constructor as the argument.
+    pattern-either:
+      - pattern: |
+          $Y = new org.yaml.snakeyaml.Yaml();
+          ...
+          $Y.load(...);
+      - pattern: |
+          $Y = new org.yaml.snakeyaml.Yaml();
+          ...
+          $Y.loadAll(...);
+      - pattern: $Y = new org.yaml.snakeyaml.Yaml().loadAll(...);
+      - pattern: $Y = new org.yaml.snakeyaml.Yaml().load(...);
+    severity: WARNING

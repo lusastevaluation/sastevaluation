@@ -1,0 +1,24 @@
+rules:
+  - id: schemafactory-dtds-not-disabled-new
+    message: SchemaFactory being instantiated without calling the setProperty
+      functions that are generally used for disabling entity processing.
+    metadata:
+      cwe: "CWE-611: Improper Restriction of XML External Entity Reference"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-8027
+        - https://github.com/apache/camel/commit/22c355bb4ffb500405499d189db30932ca5aac9
+    languages:
+      - java
+    severity: ERROR
+    patterns:
+      - pattern-either:
+          - pattern: $FACTORY = SchemaFactory.newInstance(...);
+          - pattern: $FACTORY = new SchemaFactory(...);
+      - pattern-not-inside: |
+          $FACTORY = ...;
+          ...
+          $FACTORY.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, ...);
+      - pattern-not-inside: |
+          $FACTORY = ...;
+          ...
+          $FACTORY.setProperty(XMLConstants.FEATURE_SECURE_PROCESSING, true);

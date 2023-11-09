@@ -1,0 +1,14 @@
+rules:
+  - id: xstream-deserialization
+    metadata:
+      cwe:
+        - "CWE-502: Deserialization of Untrusted Data"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2017-9805
+        - https://github.com/apache/struts/commit/19494718865f2fb7da5ea363de3822f87fbda26
+    pattern: XStream $XSTREAM = ...; ... $XSTREAM.fromXML(...);
+    message: Serialization libraries such as XStream can allow the deserialization
+      of untrusted data, ensure XML data is trusted before deserializing.
+    languages:
+      - java
+    severity: WARNING

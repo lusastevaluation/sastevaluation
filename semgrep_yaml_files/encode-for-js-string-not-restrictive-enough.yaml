@@ -1,0 +1,14 @@
+rules:
+  - id: encode-for-js-string-not-restrictive-enough
+    metadata:
+      cwe: "CWE-79: Improper Neutralization of Input During Web Page Generation
+        ('Cross-site Scripting')"
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2016-5394
+        - https://github.com/apache/sling-old-svn-mirror/commit/7d2365a248943071a44d8495655186e4f14ea294
+    pattern: org.owasp.encoder.Encode.forJavaScriptSource(...);
+    message: org.owasp.encoder.Encode.forJavaScriptSource may not be restrive
+      enough. See references for more restrictive encoding.
+    languages:
+      - java
+    severity: WARNING

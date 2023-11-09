@@ -1,0 +1,25 @@
+rules:
+  - id: xxe-xpath
+    metadata:
+      cwe: "CWE-611: Improper Restriction of XML External Entity Reference"
+    message: XML External Entity (XXE) attacks can occur when an XML parser supports
+      XML entities while processing XML received from an untrusted source. Use
+      an established builder to parse input stream, such as DocumentBuilder.
+    refernces:
+      - https://nvd.nist.gov/vuln/detail/CVE-2014-3600
+      - https://nvd.nist.gov/vuln/detail/CVE-2015-0264
+      - https://nvd.nist.gov/vuln/detail/CVE-2018-1284
+      - https://github.com/apache/activemq/commit/b9696ac80bb496b52d05c3884f81b0746d9af9e2
+      - https://github.com/apache/camel/commit/1df559649a96a1ca0368373387e542f46e4820da
+      - https://github.com/apache/hive/commit/b0a58d245875dc1b3ac58a7cf1a61d3b17805e96
+    languages:
+      - java
+    severity: WARNING
+    pattern-either:
+      - pattern: $EX.evaluate(...);
+      - pattern-inside: |
+          $X $CLASS {
+            ...
+            javax.xml.xpath.XPathExpression $EX;
+            ...
+          }

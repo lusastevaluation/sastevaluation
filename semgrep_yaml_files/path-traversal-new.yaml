@@ -1,0 +1,26 @@
+rules:
+  - id: path-traversal-new
+    metadata:
+      cwe: "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path
+        Traversal')"
+      references:
+        - https://github.com/apache/tika/commit/a09d853dbed712f644e274b497cce254f3189d57
+        - https://nvd.nist.gov/vuln/detail/CVE-2018-11762
+    message: Arguments passed to Java files should be verified/sanitized of special
+      escape characters which may lead to path traversal vulnerabilities.
+    languages:
+      - java
+    severity: WARNING
+    pattern-either:
+      - pattern: |
+          public static void main($VARS) {
+            ...
+            $METHOD($VARS[...]);
+            ...
+          }
+      - pattern: |
+          public static void main($VARS) {
+            ...
+            $METHOD($VARS);
+            ...
+          }
