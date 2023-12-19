@@ -1,0 +1,170 @@
+﻿CVE-2018-1000134,ant
+CVE-2016-8749,mvn clean install -DskipTests
+CVE-2018-8034,ant
+CVE-2016-8735,ant
+CVE-2014-0003,mvn -f camel-core/ clean install -DskipTests && mvn -f components/camel-saxon/ clean install -DskipTests
+CVE-2018-7489,mvn clean install -DskipTests
+CVE-2013-2135,mvn -f xwork-core/ clean install -DskipTests
+CVE-2016-0762,ant
+CVE-2017-15719,mvn clean install -DskipTests
+CVE-2016-6802,mvn clean install -DskipTests
+CVE-2018-11771,mvn clean install -DskipTests
+CVE-2018-8027,mvn clean install -DskipTests
+CVE-2018-10862,mvn clean install -DskipTests
+CVE-2014-0107,ant
+CVE-2017-12197,gradle build
+CVE-2018-1260,mvn clean install -DskipTests
+CVE-2018-8038,mvn clean install -DskipTests
+CVE-2016-2162,mvn -f core/ clean install -DskipTests
+CVE-2017-5929,mvn clean install -DskipTests
+CVE-2012-0392,mvn -f xwork-core/ clean install -DskipTests
+CVE-2018-17197,mvn clean install -DskipTests
+CVE-2018-1000531,mvn clean install -DskipTests
+CVE-2016-7051,mvn clean install -DskipTests
+CVE-2015-0263,mvn -f camel-core/ clean install -DskipTests
+CVE-2016-0785,mvn -f core/ clean install -DskipTests
+CVE-2016-1182,mvn clean install -DskipTests
+CVE-2015-5347,mvn clean install -DskipTests
+CVE-2017-7661,mvn clean install -DskipTests
+CVE-2015-4165,mvn clean install -DskipTests
+CVE-2012-4387,mvn -f xwork-core/ clean install -DskipTests
+CVE-2013-4378,mvn -f javamelody-core/ clean install -DskipTests
+CVE-2018-1306,mvn clean install -DskipTests
+CVE-2014-3600,mvn -f activemq-broker/ clean install -DskipTests && mvn -f activemq-client/ clean install -DskipTests
+CVE-2018-1327,mvn clean install -DskipTests
+CVE-2017-5645,mvn clean install -DskipTests
+CVE-2015-0264,mvn -f camel-core/ clean install -DskipTests
+CVE-2018-1324,mvn clean install -DskipTests
+CVE-2018-1000110,mvn clean install -DskipTests
+CVE-2015-0899,mvn clean install -DskipTests
+CVE-2018-11787,mvn -f webconsole/ clean install -DskipTests
+CVE-2018-1000129,mvn clean install -DskipTests
+CVE-2012-6092,mvn -f activemq-web/ clean install -DskipTests && mvn -f activemq-web-demo/ clean install -DskipTests
+CVE-2018-14627,mvn clean install -DskipTests
+CVE-2016-5394,mvn -f bundles/extensions/xss/ clean install -DskipTests
+CVE-2016-4433,mvn -f xwork-core/ clean install -DskipTests
+CVE-2014-3579,mvn -f apollo-selector/ clean install -DskipTests
+CVE-2018-8039,mvn clean install -DskipTests
+CVE-2016-4437,mvn clean install -DskipTests
+CVE-2017-7675,ant
+CVE-2018-17194,mvn clean install -DskipTests && mvn -f nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-framework-cluster/ clean install -DskipTests
+CVE-2014-3490,mvn -f jaxrs/providers/jaxb/ clean install -DskipTests
+CVE-2018-1000089,mvn clean install -DskipTests
+CVE-2018-10936,mvn clean install -DskipTests
+CVE-2018-20318,mvn clean install -DskipTests
+CVE-2018-5968,mvn clean install -DskipTests
+CVE-2017-7662,mvn clean install -DskipTests
+CVE-2016-8738,mvn -f core/ clean install -DskipTests
+CVE-2018-11784,ant
+CVE-2018-12585,mvn clean install -DskipTests
+CVE-2018-11761,mvn clean install -DskipTests
+CVE-2013-4221,cd build && ant generate && cd ../
+CVE-2018-17195,mvn -f nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/ clean install -DskipTests
+CVE-2017-9805,mvn -f plugins/rest/ clean install -DskipTests
+CVE-2014-3682,mvn -f jbpm-designer-backend/ clean install -DskipTests
+CVE-2018-17187,mvn clean install -DskipTests
+CVE-2017-7672,mvn -f core/ clean install -DskipTests
+CVE-2017-5647,ant
+CVE-2016-6797,ant
+CVE-2014-0050,mvn clean install -DskipTests
+CVE-2014-8122,mvn clean install -DskipTests
+CVE-2016-6794,ant
+CVE-2015-3271,mvn clean install -DskipTests
+CVE-2018-20227,mvn clean install -DskipTests
+CVE-2018-1335,mvn clean install -DskipTests
+CVE-2016-4003,mvn -f core/ clean install -DskipTests
+CVE-2011-1498,mvn -f httpclient/ clean install -DskipTests
+CVE-2017-2617,mvn clean install -DskipTests && mvn -f hawtio-system/ clean install -DskipTests
+CVE-2018-1000130,mvn -f agent/ clean install -DskipTests
+CVE-2017-9804,mvn -f xwork-core/ clean install -DskipTests
+CVE-2017-12631,mvn -f plugins/spring/ clean install -DskipTests && mvn -f plugins/spring3/ clean install -DskipTests
+CVE-2017-12196,mvn clean install -DskipTests
+CVE-2018-11786,mvn -f shell/core clean install -DskipTests
+CVE-2018-1000125,mvn clean install -DskipTests
+CVE-2014-0074,mvn -f core/ clean install -DskipTests
+CVE-2018-11307,mvn clean install -DskipTests
+CVE-2018-12022,mvn clean install -DskipTests
+CVE-2017-14063,mvn clean install -DskipTests
+CVE-2018-8030,mvn clean install -DskipTests
+CVE-2017-15709,mvn -f activemq-client/ clean install -DskipTests
+CVE-2018-11776,mvn clean install -DskipTests
+CVE-2013-4330,mvn -f camel-core/ clean install -DskipTests
+CVE-2018-1999040,mvn clean install -DskipTests
+CVE-2018-1000866,mvn clean install -DskipTests
+CVE-2018-18628,mvn clean install -DskipTests
+CVE-2018-8017,mvn clean install -DskipTests
+CVE-2017-12634,mvn clean install -DskipTests
+CVE-2017-2638,mvn -f server/ clean install -DskipTests && mvn -f integrationtests/ clean install -DskipTests
+CVE-2018-15531,mvn clean install -DskipTests
+CVE-2013-4366,mvn clean install -DskipTests
+CVE-2014-3488,mvn clean install -DskipTests
+CVE-2016-5388,ant
+CVE-2018-11758,mvn -f cayenne-server/ clean install -DskipTests
+CVE-2018-1000111,mvn clean install -DskipTests
+CVE-2017-7525,mvn clean install -DskipTests
+CVE-2016-4977,mvn clean install -DskipTests
+CVE-2018-1002201,mvn clean install -DskipTests
+CVE-2018-1067,mvn clean install -DskipTests
+CVE-2018-11762,mvn clean install -DskipTests
+CVE-2017-12611,mvn -f core/ clean install -DskipTests
+CVE-2013-2115,mvn -f xwork-core/ clean install -DskipTests
+CVE-2016-3088,mvn clean install -DskipTests
+CVE-2017-1000487,mvn clean install -DskipTests
+CVE-2012-6153,mvn clean install -DskipTests
+CVE-2016-1000031,mvn clean install -DskipTests
+CVE-2016-6817,ant
+CVE-2016-4465,mvn -f core/ clean install -DskipTests
+CVE-2014-3577,mvn clean install -DskipTests
+CVE-2018-12023,mvn clean install -DskipTests
+CVE-2016-4970,mvn clean install -DskipTests
+CVE-2017-7957,mvn -f xstream/ clean install -DskipTests
+CVE-2015-0886,ant
+CVE-2016-3082,mvn -f core/ clean install -DskipTests
+CVE-2018-1000548,mvn clean install -DskipTests
+CVE-2015-2913,mvn clean install -DskipTests
+CVE-2018-1325,mvn clean install -DskipTests
+CVE-2018-8018,mvn -f modules/clients/ clean install -DskipTests
+CVE-2018-17186,mvn -f client/console/ clean install -DskipTests && mvn -f ext/flowable/flowable-bpmn/ clean install -DskipTests
+CVE-2013-2186,mvn clean install -DskipTests
+CVE-2015-6748,mvn clean install -DskipTests
+CVE-2018-14658,mvn clean install -DskipTests
+CVE-2018-1000844,mvn clean install -DskipTests
+CVE-2018-11788,mvn -f specs/ clean install -DskipTests && mvn -f util/ clean install -DskipTests
+CVE-2018-10237,mvn clean install -DskipTests
+CVE-2018-1002200,mvn clean install -DskipTests
+CVE-2017-12159,mvn clean install -DskipTests
+CVE-2018-17297,mvn -f hutool-core/ clean install -DskipTests && mvn -f hutool-poi/ clean install -DskipTests
+CVE-2017-2670,mvn clean install -DskipTests
+CVE-2016-8744,mvn -f utils/common/ clean install -DskipTests
+CVE-2017-14949,cd build && ant
+CVE-2018-1114,mvn clean install -DskipTests
+CVE-2017-15717,mvn clean install -DskipTests
+CVE-2017-9096,mvn clean install -DskipTests
+CVE-2015-8581,mvn clean install -DskipTests
+CVE-2015-5531,mvn clean install -DskipTests
+CVE-2018-8037,ant
+CVE-2017-5638,mvn -f core/ clean install -DskipTests
+CVE-2018-1284,mvn clean install -DskipTests
+CVE-2017-17485,mvn clean install -DskipTests
+CVE-2015-3208,mvn clean install -DskipTests
+CVE-2018-1000632,gradle build
+CVE-2018-8014,ant
+CVE-2018-1000112,mvn clean install -DskipTests
+CVE-2018-14637,mvn clean install -DskipTests
+CVE-2014-3612,mvn clean install -DskipTests
+CVE-2016-10006,mvn clean install -DskipTests
+CVE-2013-2035,mvn -f hawtjni-runtime/ clean install -DskipTests
+CVE-2016-2402,mvn clean install -DskipTests
+CVE-2014-4172,mvn clean install -DskipTests
+CVE-2018-1298,mvn clean install -DskipTests
+CVE-2018-11775,mvn -f activemq-amqp/ clean install -DskipTests && mvn -f activemq-broker/ clean install -DskipTests && mvn -f activemq-client/ clean install -DskipTests && mvn -f activemq-mqtt/ clean install -DskipTests && mvn -f activemq-stomp/ clean install -DskipTests && mvn -f activemq-unit-tests/ clean install -DskipTests
+CVE-2018-1000056,mvn clean install -DskipTests
+CVE-2016-6809,mvn clean install -DskipTests
+CVE-2018-12418,mvn clean install -DskipTests
+CVE-2015-5175,mvn clean install -DskipTests
+CVE-2018-12036,mvn clean install -DskipTests
+CVE-2013-1879,mvn -f activemq-client/ clean install -DskipTests
+CVE-2018-1000114,mvn clean install -DskipTests
+CVE-2016-6798,mvn -f bundles/extensions/xss clean install -DskipTests
+CVE-2018-20059,mvn clean install -DskipTests
+CVE-2018-1000107,mvn clean install -DskipTests
